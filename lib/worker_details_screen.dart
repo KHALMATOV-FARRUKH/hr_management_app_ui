@@ -30,7 +30,7 @@ class WorkerDetailsScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: EdgeInsets.only(left: 20, right: 20, top: 20),
+                    padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
@@ -45,13 +45,13 @@ class WorkerDetailsScreen extends StatelessWidget {
                               borderRadius: BorderRadius.circular(20),
                               color: Colors.white,
                             ),
-                            child: Icon(Icons.arrow_back, color: Colors.black),
+                            child: const Icon(Icons.arrow_back, color: Colors.black),
                           ),
                         ),
                         Center(
                           child: Text(
                             job,
-                            style: TextStyle(fontSize: 18),
+                            style: const TextStyle(fontSize: 18),
                           ),
                         ),
                         Container(
@@ -60,14 +60,14 @@ class WorkerDetailsScreen extends StatelessWidget {
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
-                          child: Icon(Icons.add, color: Colors.black, size: 25),
+                          child: const Icon(Icons.add, color: Colors.black, size: 25),
                         ),
                       ],
                     ),
                   ),
                   Center(
                     child: Container(
-                      margin: EdgeInsets.only(top: 30),
+                      margin: const EdgeInsets.only(top: 30),
                       height: 100,
                       width: 100,
                       decoration: BoxDecoration(
@@ -76,7 +76,7 @@ class WorkerDetailsScreen extends StatelessWidget {
                             image: AssetImage(image),
                             fit: BoxFit.cover,
                           ),
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               spreadRadius: 0.1,
                               blurRadius: 2,
@@ -85,22 +85,22 @@ class WorkerDetailsScreen extends StatelessWidget {
                           ]),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Center(
                     child: Text(
                       name,
                       style:
-                          TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                          const TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Text(
                     jobTitle,
-                    style: TextStyle(color: Colors.black54),
+                    style: const TextStyle(color: Colors.black54),
                   ),
-                  SizedBox(height: 10),
-                 Padding(
-                   padding: const EdgeInsets.only(right: 20, left: 20, top: 20),
+                  const SizedBox(height: 10),
+                 const Padding(
+                   padding: EdgeInsets.only(right: 20, left: 20, top: 20),
                    child: Text("Professional skills: \n— Programming in Delphi, Java,"
                        " PHP, C++;\n— Knowledge of document markup languages "
                        "(websites): HTML, CSS, Javascript (JS); \n— Ability to "
@@ -116,7 +116,7 @@ class WorkerDetailsScreen extends StatelessWidget {
                 initialChildSize: 0.60,
                 builder: (context, scrollController) {
                   return Container(
-                    padding: EdgeInsets.only(top: 40, right: 20, left: 20),
+                    padding: const EdgeInsets.only(top: 40, right: 20, left: 20),
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(50),
@@ -124,12 +124,12 @@ class WorkerDetailsScreen extends StatelessWidget {
                     child: ListView(
                       controller: scrollController,
                       children: [
-                        Text(
+                        const Text(
                           "Stats",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -153,24 +153,24 @@ class WorkerDetailsScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                        SizedBox(height: 20),
-                        Text(
+                        const SizedBox(height: 20),
+                        const Text(
                           "Last Updates",
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         lastUpdates(
                             name,
                             "General",
                             "done great job when meeting newcomers in the office "
-                                "yesterday. I\'m proud of him."),
-                        SizedBox(height: 20),
+                                "yesterday. I'm proud of him."),
+                        const SizedBox(height: 20),
                         lastUpdates(
                             name,
                             "Attitude",
                             "took the extra effort to "
-                                "help me with my project last week. He\'s five star teamlead!"),
+                                "help me with my project last week. He's five star teamlead!"),
                       ],
                     ),
                   );
@@ -191,24 +191,24 @@ class WorkerDetailsScreen extends StatelessWidget {
         borderRadius: BorderRadius.circular(30),
       ),
       child: Padding(
-        padding: EdgeInsets.all(20),
+        padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               title,
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Text(
               name,
-              style: TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 13, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 5),
+            const SizedBox(height: 5),
             Text(
               desc,
-              style: TextStyle(fontSize: 13),
+              style: const TextStyle(fontSize: 13),
             ),
           ],
         ),
@@ -229,18 +229,18 @@ class WorkerDetailsScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(icon, color: color, size: 40),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 number.toString(),
-                style: TextStyle(fontSize: 14),
+                style: const TextStyle(fontSize: 14),
               ),
-              SizedBox(width: 4),
+              const SizedBox(width: 4),
               Text(
                 title,
-                style: TextStyle(color: Colors.black54),
+                style: const TextStyle(color: Colors.black54),
               ),
             ],
           ),

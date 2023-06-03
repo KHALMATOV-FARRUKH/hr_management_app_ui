@@ -14,13 +14,13 @@ class HomeScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           "Today",
                           style: TextStyle(
@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
                       height: 50,
                       width: 50,
                       decoration: BoxDecoration(
-                        image: DecorationImage(
+                        image: const DecorationImage(
                           image: AssetImage("assets/images/user1.jpg"),
                           fit: BoxFit.cover,
                         ),
@@ -49,9 +49,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Padding(
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: SizedBox(
                   height: 50,
                   child: TextField(
@@ -72,7 +72,7 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 30),
-              Padding(
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   "Departments",
@@ -82,13 +82,13 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               SizedBox(
                 height: 120,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    SizedBox(width: 20),
+                    const SizedBox(width: 20),
                     departmentCard(
                         "Development", 88, "techies", Colors.blueAccent, "💻"),
                     departmentCard("UI/UX Design", 45, "creatives",
@@ -98,19 +98,19 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 30),
-              Padding(
+              const SizedBox(height: 30),
+              const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Text(
                   "You recently worker with",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               ListView(
                 shrinkWrap: true,
-                physics: NeverScrollableScrollPhysics(),
-                padding: EdgeInsets.symmetric(horizontal: 20),
+                physics: const NeverScrollableScrollPhysics(),
+                padding: const EdgeInsets.symmetric(horizontal: 20),
                 children: [
                   usersWorkedWith(
                     context,
@@ -152,7 +152,7 @@ class HomeScreen extends StatelessWidget {
   Widget usersWorkedWith(BuildContext context,
       String name, String image, Color color, String jobTitle) {
     return Padding(
-      padding: EdgeInsets.only(bottom: 20),
+      padding: const EdgeInsets.only(bottom: 20),
       child: InkWell(
         onTap: () {
           String _job;
@@ -197,11 +197,11 @@ class HomeScreen extends StatelessWidget {
               ),
               title: Text(
                 name,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
               subtitle: Text(
                 jobTitle,
-                style: TextStyle(color: Colors.black54),
+                style: const TextStyle(color: Colors.black54),
               ),
               trailing: Container(
                 height: 30,
@@ -210,7 +210,7 @@ class HomeScreen extends StatelessWidget {
                   color: color.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(10),
                 ),
-                child: Padding(
+                child: const Padding(
                   padding: EdgeInsets.all(4),
                   child: Center(
                     child: Icon(FontAwesome5Regular.edit, size: 20),
@@ -227,7 +227,7 @@ class HomeScreen extends StatelessWidget {
   Widget departmentCard(
       String name, int number, String title, Color color, String emoji) {
     return Padding(
-      padding: EdgeInsets.only(right: 20),
+      padding: const EdgeInsets.only(right: 20),
       child: Container(
         width: 150,
         decoration: BoxDecoration(
@@ -235,7 +235,7 @@ class HomeScreen extends StatelessWidget {
           borderRadius: BorderRadius.circular(30),
         ),
         child: Padding(
-          padding: EdgeInsets.all(15),
+          padding: const EdgeInsets.all(15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -250,19 +250,19 @@ class HomeScreen extends StatelessWidget {
                 child: Center(
                   child: Text(
                     emoji,
-                    style: TextStyle(fontSize: 18),
+                    style: const TextStyle(fontSize: 18),
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 name,
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
-                number.toString() + " " + title,
-                style: TextStyle(color: Colors.black54),
+                "$number $title",
+                style: const TextStyle(color: Colors.black54),
               ),
             ],
           ),

@@ -12,7 +12,7 @@ class ViewsScreen extends StatelessWidget {
         child: Stack(
           children: [
             PageView(
-              children: [
+              children: const [
                 HomeScreen(),
               ],
             ),
@@ -21,7 +21,7 @@ class ViewsScreen extends StatelessWidget {
               child: Container(
                 height: 90,
                 width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color.fromRGBO(31, 40, 71, 1),
                   borderRadius: BorderRadius.only(
                     topRight: Radius.circular(45),
@@ -29,10 +29,10 @@ class ViewsScreen extends StatelessWidget {
                   ),
                 ),
                 child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 40),
+                  padding: const EdgeInsets.symmetric(horizontal: 40),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
+                    children: const [
                       Icon(AntDesign.like1, color: Colors.white),
                       Icon(AntDesign.user, color: Colors.white),
                       Icon(AntDesign.menu_fold, color: Colors.white),
