@@ -94,7 +94,7 @@ class HomeScreen extends StatelessWidget {
                     departmentCard("UI/UX Design", 45, "creatives",
                         Colors.orangeAccent, "🎨"),
                     departmentCard(
-                        "QA Engineers", 88, "techies", Colors.redAccent, "💻"),
+                        "QA Engineers", 24, "helpers", Colors.redAccent, "💻"),
                   ],
                 ),
               ),
